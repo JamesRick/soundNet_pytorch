@@ -193,9 +193,6 @@ class SoundNet(nn.Module):
         _, self.conv8_scns = self.put_weights([], self.conv8_scns, params_w, batch_norm=False)
 
 
-
-
-
 def get_model(pretrained=True):
     pytorch_model = SoundNet()
 
@@ -229,7 +226,6 @@ def extract_features():
         features['feats'].append(output)
         features['paths'].append(audio_paths[idx])
     return features
-
 
 if __name__ == '__main__':
     extract_features()
